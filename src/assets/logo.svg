@@ -1,0 +1,36 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="24" y="24" width="464" height="464" rx="105" fill="url(#bg)" stroke="#12001F" stroke-width="14"></rect>
+  <rect x="42" y="42" width="428" height="428" rx="90" stroke="#7E3AA8" stroke-opacity="0.45" stroke-width="6"></rect>
+
+  <text x="220" y="360" text-anchor="middle" font-family="Georgia, serif" font-size="310" font-weight="700" fill="#FFF7FF" filter="url(#shadow)">
+    j
+  </text>
+
+  <circle cx="335" cy="335" r="42" fill="url(#dot)" filter="url(#glow)"></circle>
+
+  <defs>
+    <linearGradient id="bg" x1="70" y1="40" x2="470" y2="480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5B1B7A"></stop>
+      <stop offset="0.45" stop-color="#2D0B45"></stop>
+      <stop offset="1" stop-color="#160021"></stop>
+    </linearGradient>
+
+    <radialGradient id="dot" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(320 315) rotate(50) scale(90)">
+      <stop stop-color="#F7C7FF"></stop>
+      <stop offset="0.45" stop-color="#C84DFF"></stop>
+      <stop offset="1" stop-color="#8B1CF6"></stop>
+    </radialGradient>
+
+    <filter id="shadow" x="40" y="40" width="340" height="420" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#000000" flood-opacity="0.35"></feDropShadow>
+    </filter>
+
+    <filter id="glow" x="230" y="230" width="220" height="220" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="16" result="blur"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="blur"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+  </defs>
+</svg>

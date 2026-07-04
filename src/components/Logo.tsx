@@ -1,11 +1,11 @@
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.svg";
 
 function Logo() {
   return (
     <img
       src={logo}
       alt="Jennifer Cobb Logo"
-      className="h-10 w-10 rounded-xl"
+      className="h-12 w-12 transition duration-300 hover:scale-105"
     />
   );
 }
