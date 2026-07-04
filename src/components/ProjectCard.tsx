@@ -1,27 +1,30 @@
-import type { Project } from "../data/projects";
-import summarist from "../assets/screenshots/summarist.png";
 import skinstric from "../assets/screenshots/skinstric.png";
+import type { Project } from "../data/projects";
 
 const screenshots: Record<string, string> = {
-  Summarist: summarist,
   Skinstric: skinstric,
 };
+
 function ProjectCard({ project }: { project: Project }) {
+  const hasDemo = project.demo.length > 0;
+  const hasGithub = project.github.length > 0;
+  const screenshot = screenshots[project.title];
+
   return (
     <article className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-2 hover:shadow-xl">
-     <div className="overflow-hidden">
-  {screenshots[project.title] ? (
-    <img
-      src={screenshots[project.title]}
-      alt={project.title}
-      className="h-56 w-full object-cover transition duration-500 hover:scale-105"
-    />
-  ) : (
-    <div className="flex h-56 items-center justify-center bg-slate-100 text-slate-400">
-      Currently in Development
-    </div>
-  )}
-</div>
+      <div className="overflow-hidden">
+        {screenshot ? (
+          <img
+            src={screenshot}
+            alt={`${project.title} screenshot`}
+            className="h-56 w-full object-cover transition duration-500 group-hover:scale-105"
+          />
+        ) : (
+          <div className="flex h-56 items-center justify-center bg-slate-100 text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">
+            Currently in Development
+          </div>
+        )}
+      </div>
 
       <div className="p-8">
         <h3 className="text-2xl font-bold text-slate-950">
@@ -44,19 +47,35 @@ function ProjectCard({ project }: { project: Project }) {
         </div>
 
         <div className="mt-8 flex gap-4">
-          <a
-            href={project.demo}
-            className="rounded-full bg-purple-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-purple-700"
-          >
-            Live Demo
-          </a>
+          {hasDemo ? (
+            <a
+              href={project.demo}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full bg-purple-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-purple-700"
+            >
+              Live Demo
+            </a>
+          ) : (
+            <span className="rounded-full bg-slate-100 px-5 py-3 text-sm font-semibold text-slate-400">
+              Demo Soon
+            </span>
+          )}
 
-          <a
-            href={project.github}
-            className="rounded-full border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-900 transition hover:border-purple-600 hover:text-purple-600"
-          >
-            GitHub
-          </a>
+          {hasGithub ? (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-900 transition hover:border-purple-600 hover:text-purple-600"
+            >
+              GitHub
+            </a>
+          ) : (
+            <span className="rounded-full border border-slate-200 px-5 py-3 text-sm font-semibold text-slate-400">
+              GitHub Soon
+            </span>
+          )}
         </div>
       </div>
     </article>

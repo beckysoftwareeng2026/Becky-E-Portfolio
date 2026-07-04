@@ -1,6 +1,16 @@
+import { useState } from "react";
 import Logo from "./Logo";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const navLinks = [
+    { label: "About", href: "#about" },
+    { label: "Skills", href: "#skills" },
+    { label: "Projects", href: "#projects" },
+    { label: "Contact", href: "#contact" },
+  ];
+
   return (
     <nav className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
@@ -18,36 +28,56 @@ function Navbar() {
           </div>
         </a>
 
-        <ul className="hidden items-center gap-8 text-sm font-semibold text-slate-700 md:flex">
-          <li>
-            <a href="#about" className="transition hover:text-purple-600">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#skills" className="transition hover:text-purple-600">
-              Skills
-            </a>
-          </li>
-          <li>
-            <a href="#projects" className="transition hover:text-purple-600">
-              Projects
-            </a>
-          </li>
-          <li>
-            <a href="#contact" className="transition hover:text-purple-600">
-              Contact
-            </a>
-          </li>
+        <ul className="hidden items-center gap-8 text-sm font-semibold text-slate-700 lg:flex">
+          {navLinks.map((link) => (
+            <li key={link.label}>
+              <a href={link.href} className="transition hover:text-purple-600">
+                {link.label}
+              </a>
+            </li>
+          ))}
         </ul>
 
         <a
           href="/Jennifer-Cobb-Resume.pdf"
-          className="rounded-full bg-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-purple-700 hover:shadow-lg"
+          className="hidden rounded-full bg-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-purple-700 hover:shadow-lg lg:inline-flex"
         >
           Resume
         </a>
+
+        <button
+          type="button"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle navigation menu"
+          className="rounded-full border border-slate-300 px-4 py-2 text-lg font-semibold text-slate-900 transition hover:border-purple-600 hover:text-purple-600 lg:hidden"
+        >
+          {isOpen ? "✕" : "☰"}
+        </button>
       </div>
+
+      {isOpen && (
+        <div className="border-t border-slate-200 bg-white px-6 py-6 lg:hidden">
+          <div className="flex flex-col gap-5 text-sm font-semibold text-slate-700">
+            {navLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className="transition hover:text-purple-600"
+              >
+                {link.label}
+              </a>
+            ))}
+
+            <a
+              href="/Jennifer-Cobb-Resume.pdf"
+              className="mt-2 rounded-full bg-purple-600 px-6 py-3 text-center text-sm font-semibold text-white"
+            >
+              Resume
+            </a>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
