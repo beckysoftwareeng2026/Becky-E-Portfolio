@@ -1,10 +1,12 @@
 import headshot from "../assets/headshot.png";
+import FadeIn from "./FadeIn";
 
 function Hero() {
   return (
     <section className="mx-auto grid min-h-[calc(100vh-80px)] max-w-7xl items-center gap-12 px-6 py-12 md:grid-cols-2">
       {/* Left Side */}
-      <div>
+      <FadeIn>
+  <div>
         <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-purple-600">
           Full Stack Software Engineer
         </p>
@@ -33,11 +35,13 @@ function Hero() {
           >
             Contact Me
           </a>
-        </div>
-      </div>
+       </div>
+    </div>
+</FadeIn>
 
       {/* Right Side */}
-      <div className="relative mx-auto w-full max-w-md">
+      <FadeIn delay={0.2}>
+  <div className="relative mx-auto w-full max-w-md">
         <div className="absolute -inset-6 rounded-[2.5rem] bg-purple-200 blur-3xl"></div>
 
         <div className="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-2xl">
@@ -76,6 +80,7 @@ function Hero() {
           </div>
         </div>
       </div>
+      </FadeIn>
     </section>
   );
 }

@@ -1,3 +1,4 @@
+import FadeIn from "./FadeIn";
 const skills = [
   "React",
   "TypeScript",
@@ -19,6 +20,7 @@ function Skills() {
       id="skills"
       className="py-24"
     >
+      <FadeIn>
       <div className="mx-auto max-w-6xl px-6">
         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-purple-600">
           Technical Skills
@@ -39,6 +41,7 @@ function Skills() {
           ))}
         </div>
       </div>
+    </FadeIn>
     </section>
   );
 }
