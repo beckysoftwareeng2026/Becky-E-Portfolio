@@ -4,7 +4,7 @@ function Logo() {
   return (
     <img
       src={logo}
-      alt="Jennifer Cobb Logo"
+      alt="Jennifer Creates Logo"
       className="h-12 w-12 transition duration-300 hover:scale-105"
     />
   );

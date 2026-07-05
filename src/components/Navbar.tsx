@@ -8,12 +8,13 @@ function Navbar() {
     { label: "About", href: "#about" },
     { label: "Skills", href: "#skills" },
     { label: "Projects", href: "#projects" },
+    { label: "Resume", href: "#resume" },
     { label: "Contact", href: "#contact" },
   ];
 
   return (
     <nav className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 max-w-7xl">
         <a href="#" className="flex items-center gap-4">
           <Logo />
 
@@ -31,7 +32,10 @@ function Navbar() {
         <ul className="hidden items-center gap-8 text-sm font-semibold text-slate-700 lg:flex">
           {navLinks.map((link) => (
             <li key={link.label}>
-              <a href={link.href} className="transition hover:text-purple-600">
+              <a
+                href={link.href}
+                className="transition duration-300 hover:text-purple-600"
+              >
                 {link.label}
               </a>
             </li>
@@ -39,10 +43,10 @@ function Navbar() {
         </ul>
 
         <a
-          href="/Jennifer-Cobb-Resume.pdf"
-          className="hidden rounded-full bg-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-purple-700 hover:shadow-lg lg:inline-flex"
+          href="#resume"
+          className="hidden rounded-full bg-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition duration-300 hover:-translate-y-0.5 hover:bg-purple-700 hover:shadow-lg lg:inline-flex"
         >
-          Resume
+          View Resume
         </a>
 
         <button
@@ -70,10 +74,11 @@ function Navbar() {
             ))}
 
             <a
-              href="/Jennifer-Cobb-Resume.pdf"
+              href="#resume"
+              onClick={() => setIsOpen(false)}
               className="mt-2 rounded-full bg-purple-600 px-6 py-3 text-center text-sm font-semibold text-white"
             >
-              Resume
+              View Resume
             </a>
           </div>
         </div>
