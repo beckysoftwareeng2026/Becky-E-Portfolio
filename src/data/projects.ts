@@ -77,23 +77,34 @@ export const projects: Project[] = [
     image: "/images/moodify.png",
     featured: false,
   },
-  {
-    id: 4,
-    title: "Weatherly",
-    subtitle: "Live weather dashboard",
-    description:
-      "A clean weather dashboard using live weather APIs with forecasts, responsive design, loading states, and error handling.",
-    challenge:
-      "Build a responsive weather app that presents real-time API data clearly across devices.",
-    solution:
-      "Designed a clean React interface with REST API integration, async data fetching, loading states, and mobile-friendly layouts.",
-    learned: ["REST APIs", "Async Data", "Loading States", "Error Handling"],
-    technologies: ["React", "REST API", "TypeScript"],
-    github: "",
-    demo: "",
-    image: "/images/weatherly.png",
-    featured: false,
-  },
+{
+  id: 4,
+  title: "Weatherly",
+  subtitle: "Node.js CLI Weather Application",
+  description:
+    "A command-line weather application built with Node.js that fetches live weather data from the OpenWeather API. It demonstrates asynchronous JavaScript, REST API integration, environment variables, and clean CLI design.",
+  challenge:
+    "Build a Node.js application capable of consuming a third-party REST API while securely managing API keys and displaying formatted weather information from the command line.",
+  solution:
+    "Developed a CLI application using Node.js, async/await, fetch(), dotenv, and the OpenWeather API to retrieve live weather conditions with clean formatting and robust error handling.",
+  learned: [
+    "Node.js",
+    "Async/Await",
+    "REST APIs",
+    "Environment Variables",
+    "JSON Parsing",
+  ],
+  technologies: [
+    "Node.js",
+    "JavaScript",
+    "OpenWeather API",
+    "dotenv",
+  ],
+  github: "https://github.com/beckysoftwareeng2026/weatherly",
+  demo: "",
+  image: "/images/weatherly.png",
+  featured: false,
+},
   {
     id: 5,
     title: "CustomKin",

@@ -1,8 +1,10 @@
 import skinstric from "../assets/screenshots/skinstric.png";
+import weatherly from "../assets/screenshots/weatherly.png";
 import type { Project } from "../data/projects";
 
 const screenshots: Record<string, string> = {
   Skinstric: skinstric,
+  Weatherly: weatherly,
 };
 
 function ProjectCard({ project }: { project: Project }) {
