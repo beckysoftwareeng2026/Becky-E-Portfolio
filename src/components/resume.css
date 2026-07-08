@@ -7,202 +7,76 @@
 
 .resume-card {
   width: 100%;
-  max-width: 950px;
+  max-width: 900px;
   background: #ffffff;
-  border-radius: 24px;
-  padding: 64px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
-}
-
-.resume-header {
+  border-radius: 28px;
+  padding: 72px 48px;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.08);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 32px;
-  margin-bottom: 32px;
+  text-align: center;
 }
 
-.resume-logo-wrapper {
-  width: 90px;
-  height: 90px;
-  border-radius: 22px;
-  background: linear-gradient(135deg, #7c3aed, #9333ea);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.resume-logo-wrapper img {
-  width: 58px;
-  height: 58px;
-}
-
-.resume-heading {
-  flex: 1;
-}
-
-.resume-location {
-  margin-top: 12px;
-  color: #94a3b8;
-  font-size: 0.95rem;
+.resume-card img {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 28px;
 }
 
 .resume-eyebrow {
-  color: #7c3aed;
+  color: #8b5cf6;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 0.3em;
   font-size: 0.8rem;
   font-weight: 700;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
-.resume-header h1 {
-  font-size: 3rem;
-  color: #111827;
+.resume-card h2 {
+  font-size: clamp(3rem, 7vw, 5rem);
+  line-height: 1;
+  font-weight: 700;
+  color: #020617;
   margin: 0;
 }
 
+.resume-card h2 span {
+  color: #9333ea;
+}
+
 .resume-title {
-  font-size: 1.2rem;
-  color: #6b7280;
-  margin-top: 8px;
-}
-
-.resume-intro {
+  margin-top: 18px;
+  color: #64748b;
   font-size: 1.15rem;
-  line-height: 1.8;
-  color: #4b5563;
-  margin-bottom: 48px;
-}
-
-.resume-divider {
-  height: 1px;
-  background: #e5e7eb;
-  margin-bottom: 48px;
-}
-
-.resume-section {
-  margin-bottom: 48px;
-}
-
-.resume-section h2 {
-  color: #7c3aed;
-  font-size: 0.95rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 18px;
-}
-
-.resume-section p {
-  color: #4b5563;
-  line-height: 1.8;
-}
-
-.resume-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-}
-
-.resume-item {
-  background: #fafafa;
-  border: 1px solid #ececec;
-  border-radius: 16px;
-  padding: 24px;
-  transition: 0.3s ease;
-}
-
-.resume-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(124, 58, 237, 0.12);
-}
-
-.resume-item h3 {
-  color: #111827;
-  margin-bottom: 12px;
-}
-
-.resume-item p {
-  color: #6b7280;
-  line-height: 1.7;
-}
-
-.resume-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.resume-tags span {
-  background: rgba(124, 58, 237, 0.08);
-  color: #7c3aed;
-  padding: 10px 18px;
-  border-radius: 999px;
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-.resume-actions {
-  display: flex;
-  gap: 18px;
-  margin-top: 56px;
 }
 
 .resume-button {
-  text-decoration: none;
-  background: #7c3aed;
-  color: white;
-  padding: 14px 28px;
+  margin-top: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 999px;
-  font-weight: 600;
-  transition: 0.3s;
+  background: #9333ea;
+  padding: 16px 34px;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 16px 35px rgba(147, 51, 234, 0.3);
+  transition: 0.3s ease;
 }
 
 .resume-button:hover {
-  background: #6d28d9;
+  transform: translateY(-3px);
+  background: #7e22ce;
 }
 
-.resume-link {
-  text-decoration: none;
-  color: #7c3aed;
-  border: 2px solid #7c3aed;
-  padding: 14px 28px;
-  border-radius: 999px;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.resume-link:hover {
-  background: #7c3aed;
-  color: white;
-}
-
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .resume {
-    padding: 80px 16px;
+    padding: 80px 18px;
   }
 
   .resume-card {
-    padding: 36px 28px;
-  }
-
-  .resume-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-  }
-
-  .resume-header h1 {
-    font-size: 2.3rem;
-  }
-
-  .resume-actions {
-    flex-direction: column;
-  }
-
-  .resume-button,
-  .resume-link {
-    width: 100%;
-    text-align: center;
+    padding: 56px 28px;
   }
 }

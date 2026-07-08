@@ -1,0 +1,135 @@
+.printable-resume {
+  min-height: 100vh;
+  background: #f5f7fb;
+  padding: 60px 24px;
+}
+
+.resume-sheet {
+  width: 8.5in;
+  min-height: 11in;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 0.45in;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+  color: #0f172a;
+}
+
+.resume-top {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 24px;
+  margin-bottom: 28px;
+}
+
+.resume-top img {
+  width: 58px;
+  height: 58px;
+}
+
+.resume-name h1 {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.resume-name h1 span {
+  color: #9333ea;
+}
+
+.resume-name > p {
+  margin-top: 8px;
+  color: #475569;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.resume-contact {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.resume-section {
+  margin-top: 18px;
+}
+
+.resume-section h2 {
+  margin-bottom: 10px;
+  color: #9333ea;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.resume-section h3 {
+  margin: 0 0 6px;
+  color: #111827;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.resume-section p {
+  margin: 0;
+  color: #334155;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 28px;
+}
+
+.skills-grid strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #111827;
+  font-size: 13px;
+}
+
+.project {
+  margin-bottom: 12px;
+}
+
+.project:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+@media print {
+  @page {
+    size: letter;
+    margin: 0;
+  }
+
+  body {
+    margin: 0;
+    background: white;
+  }
+
+  .printable-resume {
+    padding: 0;
+    background: white;
+  }
+
+  .resume-sheet {
+    width: 8.5in;
+    min-height: 11in;
+    box-shadow: none;
+    margin: 0;
+  }
+
+  .resume-section {
+    break-inside: avoid;
+  }
+}

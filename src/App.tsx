@@ -6,8 +6,15 @@ import Projects from "./components/Projects";
 import Resume from "./components/Resume";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import PrintableResume from "./components/PrintableResume";
 
 function App() {
+  const isResumePage = window.location.pathname === "/resume";
+
+  if (isResumePage) {
+    return <PrintableResume />;
+  }
+
   return (
     <>
       <Navbar />

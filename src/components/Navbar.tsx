@@ -43,7 +43,7 @@ function Navbar() {
         </ul>
 
         <a
-          href="#resume"
+          href="/resume"
           className="hidden rounded-full bg-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition duration-300 hover:-translate-y-0.5 hover:bg-purple-700 hover:shadow-lg lg:inline-flex"
         >
           View Resume
@@ -74,7 +74,7 @@ function Navbar() {
             ))}
 
             <a
-              href="#resume"
+              href="/resume"
               onClick={() => setIsOpen(false)}
               className="mt-2 rounded-full bg-purple-600 px-6 py-3 text-center text-sm font-semibold text-white"
             >
