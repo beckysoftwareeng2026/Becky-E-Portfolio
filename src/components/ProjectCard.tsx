@@ -1,10 +1,13 @@
 import skinstric from "../assets/screenshots/skinstric.png";
 import weatherly from "../assets/screenshots/weatherly.png";
+import moodify from "../assets/screenshots/moodify.png";
 import type { Project } from "../data/projects";
+
 
 const screenshots: Record<string, string> = {
   Skinstric: skinstric,
   Weatherly: weatherly,
+  Moodify: moodify,
 };
 
 function ProjectCard({ project }: { project: Project }) {
