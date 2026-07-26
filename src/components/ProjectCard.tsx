@@ -4,7 +4,6 @@ import moodify from "../assets/screenshots/moodify.png";
 import petpat from "../assets/screenshots/petpat.png";
 import type { Project } from "../data/projects";
 
-
 const screenshots: Record<string, string> = {
   Skinstric: skinstric,
   Weatherly: weatherly,
@@ -13,19 +12,40 @@ const screenshots: Record<string, string> = {
 };
 
 function ProjectCard({ project }: { project: Project }) {
-  const hasDemo = project.demo.length > 0;
-  const hasGithub = project.github.length > 0;
+  const hasDemo = project.demo.trim().length > 0;
+  const hasGithub = project.github.trim().length > 0;
   const screenshot = screenshots[project.title];
+
+  const primaryLink = hasDemo
+    ? project.demo
+    : hasGithub
+      ? project.github
+      : "";
 
   return (
     <article className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-2 hover:shadow-xl">
       <div className="overflow-hidden">
         {screenshot ? (
-          <img
-            src={screenshot}
-            alt={`${project.title} screenshot`}
-            className="h-56 w-full object-cover transition duration-500 group-hover:scale-105"
-          />
+          primaryLink ? (
+            <a
+              href={primaryLink}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Open ${project.title}`}
+            >
+              <img
+                src={screenshot}
+                alt={`${project.title} screenshot`}
+                className="h-56 w-full cursor-pointer object-cover transition duration-500 group-hover:scale-105"
+              />
+            </a>
+          ) : (
+            <img
+              src={screenshot}
+              alt={`${project.title} screenshot`}
+              className="h-56 w-full object-cover transition duration-500 group-hover:scale-105"
+            />
+          )
         ) : (
           <div className="flex h-56 items-center justify-center bg-slate-100 text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">
             Currently in Development
@@ -35,7 +55,18 @@ function ProjectCard({ project }: { project: Project }) {
 
       <div className="p-8">
         <h3 className="text-2xl font-bold text-slate-950">
-          {project.title}
+          {primaryLink ? (
+            <a
+              href={primaryLink}
+              target="_blank"
+              rel="noreferrer"
+              className="transition hover:text-purple-600"
+            >
+              {project.title}
+            </a>
+          ) : (
+            project.title
+          )}
         </h3>
 
         <p className="mt-4 leading-7 text-slate-600">
@@ -65,7 +96,7 @@ function ProjectCard({ project }: { project: Project }) {
             </a>
           ) : (
             <span className="rounded-full bg-slate-100 px-5 py-3 text-sm font-semibold text-slate-400">
-              Demo Soon
+              Backend Project
             </span>
           )}
 
