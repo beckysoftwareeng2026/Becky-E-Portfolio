@@ -124,6 +124,36 @@ export const projects: Project[] = [
   image: "/images/weatherly.png",
   featured: false,
 },
+{
+  id: 5,
+  title: "PetPat API",
+  subtitle: "RESTful Pet Management API",
+  description:
+    "A RESTful API built with Express.js for managing pet profiles using full CRUD operations and in-memory data storage.",
+  challenge:
+    "Build a complete backend API from scratch that supports creating, reading, updating, and deleting pet records while following RESTful design principles.",
+  solution:
+    "Developed an Express.js API with five CRUD endpoints, route parameters, request body handling, proper HTTP status codes, and comprehensive testing using Postman.",
+  learned: [
+    "Built a RESTful API with Express.js",
+    "Implemented CRUD operations",
+    "Worked with req.params and req.body",
+    "Used appropriate HTTP status codes",
+    "Tested endpoints with Postman"
+  ],
+  technologies: [
+    "Node.js",
+    "Express.js",
+    "JavaScript",
+    "REST API", 
+    "CRUD",
+    "Postman"
+  ],
+  github: "https://github.com/beckysoftwareeng2026/PetPat-",
+  demo: "",
+  image: "petpat",
+  featured: false,
+},
   {
     id: 5,
     title: "CustomKin",

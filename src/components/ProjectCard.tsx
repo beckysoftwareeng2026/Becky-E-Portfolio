@@ -1,6 +1,7 @@
 import skinstric from "../assets/screenshots/skinstric.png";
 import weatherly from "../assets/screenshots/weatherly.png";
 import moodify from "../assets/screenshots/moodify.png";
+import petpat from "../assets/screenshots/petpat.png";
 import type { Project } from "../data/projects";
 
 
@@ -8,6 +9,7 @@ const screenshots: Record<string, string> = {
   Skinstric: skinstric,
   Weatherly: weatherly,
   Moodify: moodify,
+  "PetPat API": petpat,
 };
 
 function ProjectCard({ project }: { project: Project }) {
