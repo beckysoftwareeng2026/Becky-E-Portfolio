@@ -13,7 +13,7 @@ function ProjectCard({
   const hasGithub = project.github.trim().length > 0;
 
   const isCustomKin = project.title === "CustomKin";
-  const isComingSoon = project.title === "My Shop API";
+
 
   const primaryLink = hasDemo
     ? project.demo
@@ -144,22 +144,20 @@ function ProjectCard({
             </span>
           )}
 
-          {hasDemo ? (
-            <a
-              href={project.demo}
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-xl bg-purple-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-purple-700"
-            >
-              Live Demo
-            </a>
-          ) : (
-            <span className="cursor-not-allowed rounded-xl bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-400">
-              {isComingSoon || isCustomKin
-                ? "Coming Soon"
-                : "API Project"}
-            </span>
-          )}
+   {hasDemo ? (
+  <a
+    href={project.demo}
+    target="_blank"
+    rel="noreferrer"
+    className="rounded-xl border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-purple-500 hover:text-purple-600"
+  >
+    Live Demo
+  </a>
+) : (
+  <span className="cursor-not-allowed rounded-xl border border-slate-200 bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-400">
+    {project.category === "backend" ? "API Project" : "Coming Soon"}
+  </span>
+)}
         </div>
       </div>
     </article>

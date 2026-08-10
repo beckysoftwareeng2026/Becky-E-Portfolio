@@ -199,37 +199,41 @@ export const projects: Project[] = [
     featured: false,
     category: "backend",
   },
-  {
-    id: 7,
-    title: "My Shop API",
-    subtitle: "Full e-commerce backend API — Coming Soon",
-    description:
-      "An e-commerce backend currently in development that will manage products, shopping carts, stock levels, and customer orders across multiple Express resources.",
-    challenge:
-      "Build a production-style backend with multiple related resources, shared application state, inventory validation, cart calculations, and order processing.",
-    solution:
-      "Planned as a modular Express.js API with dedicated product, cart, and order routers, reusable middleware, business logic, and a structure ready for future database integration.",
-    learned: [
-      "Multiple Express routers",
-      "Shared application state",
-      "Inventory and stock validation",
-      "Shopping cart calculations",
-      "Order processing",
-      "Global error middleware",
-    ],
-    technologies: [
-      "Node.js",
-      "Express.js",
-      "JavaScript",
-      "REST API",
-      "Postman",
-    ],
-    github: "",
-    demo: "",
-    image: "/images/my-shop-api.png",
-    featured: false,
-    category: "backend",
-  },
+ {
+  id: 7,
+  title: "My Shop API",
+  subtitle: "E-commerce backend REST API",
+  description:
+    "A RESTful e-commerce API built with Express.js for managing products, shopping cart operations, order processing, stock validation, middleware, and error handling.",
+  challenge:
+    "Build a complete multi-resource backend that connects products, cart management, and order processing while enforcing inventory rules and clean API behavior.",
+  solution:
+    "Created a modular Express API using controllers, routes, middleware, and shared data modules. Added product CRUD, cart totals and stock validation, checkout logic, reusable validation middleware, and global error handling.",
+  learned: [
+    "RESTful API Design",
+    "Express Middleware",
+    "Controller Architecture",
+    "Business Logic",
+    "Shopping Cart Management",
+    "Order Processing",
+    "Input Validation",
+    "Error Handling",
+    "Postman Testing"
+  ],
+  technologies: [
+    "Node.js",
+    "Express.js",
+    "JavaScript",
+    "REST API",
+    "CRUD",
+    "Postman"
+  ],
+  github: "https://github.com/beckysoftwareeng2026/my-shop-api",
+  demo: "",
+  image: "/images/my-shop-api.png",
+  featured: false,
+  category: "backend",
+},
   {
     id: 8,
     title: "CustomKin",
