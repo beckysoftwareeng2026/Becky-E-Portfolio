@@ -20,7 +20,7 @@ import FadeIn from "./FadeIn";function Contact() {
 
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <a
-            href="mailto:jennifercobb829@gmail.com"
+            href="mailto:jennifercreates01@gmail.com"
             className="rounded-full bg-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-purple-700"
           >
             Email Me
@@ -35,12 +35,14 @@ import FadeIn from "./FadeIn";function Contact() {
             GitHub
           </a>
 
-          <a
-            href="#"
-            className="rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-900 transition hover:border-purple-600 hover:text-purple-600"
-          >
-            LinkedIn
-          </a>
+         <a
+  href="https://www.linkedin.com/in/jennifer-cobb-software-engineer"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-900 transition hover:border-purple-600 hover:text-purple-600"
+>
+  LinkedIn
+</a>
         </div>
       </div>
     </FadeIn>
