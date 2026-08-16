@@ -7,9 +7,10 @@
 .resume-sheet {
   width: 8.5in;
   min-height: 11in;
+  box-sizing: border-box;
   margin: 0 auto;
   background: #ffffff;
-  padding: 0.45in;
+  padding: 0.4in 0.45in;
   box-shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
   color: #0f172a;
 }
@@ -17,10 +18,10 @@
 .resume-top {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 20px;
   border-bottom: 2px solid #e5e7eb;
-  padding-bottom: 24px;
-  margin-bottom: 28px;
+  padding-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .resume-top img {
@@ -30,7 +31,7 @@
 
 .resume-name h1 {
   margin: 0;
-  font-size: 40px;
+  font-size: 36px;
   line-height: 1;
   font-weight: 800;
   letter-spacing: -0.04em;
@@ -41,63 +42,70 @@
 }
 
 .resume-name > p {
-  margin-top: 8px;
+  margin-top: 6px;
   color: #475569;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
 }
-
 .resume-contact {
-  margin-top: 10px;
+  margin-top: 7px;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
   color: #64748b;
-  font-size: 12px;
+  font-size: 11px;
+}
+.resume-contact a {
+  color: #64748b;
+  text-decoration: none;
+}
+
+.resume-contact a:hover {
+  color: #9333ea;
+  text-decoration: underline;
 }
 
 .resume-section {
-  margin-top: 18px;
+  margin-top: 14px;
 }
 
 .resume-section h2 {
-  margin-bottom: 10px;
+  margin-bottom: 7px;
   color: #9333ea;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.22em;
   text-transform: uppercase;
 }
 
 .resume-section h3 {
-  margin: 0 0 6px;
+  margin: 0 0 4px;
   color: #111827;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 800;
 }
 
 .resume-section p {
   margin: 0;
   color: #334155;
-  font-size: 13px;
-  line-height: 1.55;
+  font-size: 12px;
+  line-height: 1.42;
 }
-
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 14px 28px;
+  gap: 10px 24px;
 }
 
 .skills-grid strong {
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
   color: #111827;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .project {
-  margin-bottom: 12px;
+  margin-bottom: 9px;
 }
 
 .project:last-child {
@@ -124,9 +132,12 @@
 
   .resume-sheet {
     width: 8.5in;
-    min-height: 11in;
+    height: 11in;
+    min-height: 0;
+    box-sizing: border-box;
     box-shadow: none;
     margin: 0;
+    padding: 0.4in 0.45in;
   }
 
   .resume-section {
