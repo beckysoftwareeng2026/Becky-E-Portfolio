@@ -27,7 +27,7 @@ import FadeIn from "./FadeIn";function Contact() {
           </a>
 
           <a
-            href="https://github.com/beckysoftwareeng2026"
+            href="https://github.com/jennifercreates01"
             target="_blank"
             rel="noreferrer"
             className="rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-900 transition hover:border-purple-600 hover:text-purple-600"

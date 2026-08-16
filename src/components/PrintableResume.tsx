@@ -22,7 +22,7 @@ function PrintableResume() {
               <span>•</span>
               <span>jennifercreates.dev</span>
               <span>•</span>
-              <span>github.com/beckysoftwareeng2026</span>
+              <span>github.com/jennifercreates01</span>
             </div>
           </div>
         </header>
