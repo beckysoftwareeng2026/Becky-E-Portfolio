@@ -28,25 +28,21 @@ function ProjectCard({
         ? "h-64 object-contain"
         : "h-64 object-cover"
   }`;
-
-  const projectPreview = isCustomKin ? (
-    <div
-      className={`flex w-full items-center justify-center bg-slate-100 ${
-        featured ? "min-h-[340px]" : "h-64"
-      }`}
-    >
-      <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-400">
-        Currently in Development
-      </p>
-    </div>
-  ) : (
+const projectPreview = (
+  <div className="relative w-full overflow-hidden">
     <img
       src={project.image}
       alt={`${project.title} project preview`}
       className={imageClasses}
     />
-  );
 
+    {isCustomKin && (
+      <div className="absolute left-4 top-6 rounded-full border border-white/70 bg-white/90 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-600 shadow-sm backdrop-blur">
+        Currently in Development
+      </div>
+    )}
+  </div>
+);
   return (
     <article
       className={`group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl ${
@@ -117,16 +113,43 @@ function ProjectCard({
           {project.description}
         </p>
 
-        <div className="mt-6 flex flex-wrap gap-2">
-          {project.technologies.map((technology) => (
-            <span
-              key={technology}
-              className="rounded-full bg-purple-50 px-3 py-1.5 text-xs font-medium text-purple-700"
-            >
-              {technology}
-            </span>
-          ))}
-        </div>
+        <div className="mt-6">
+  {project.plannedSkills && (
+    <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-400">
+      Current Stack
+    </p>
+  )}
+
+  <div className="flex flex-wrap gap-2">
+    {project.technologies.map((technology) => (
+      <span
+        key={technology}
+        className="rounded-full bg-purple-50 px-3 py-1.5 text-xs font-medium text-purple-700"
+      >
+        {technology}
+      </span>
+    ))}
+  </div>
+
+  {project.plannedSkills && (
+    <div className="mt-5">
+      <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-400">
+        Planned Engineering
+      </p>
+
+      <div className="flex flex-wrap gap-2">
+        {project.plannedSkills.map((skill) => (
+          <span
+            key={skill}
+            className="rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-slate-500"
+          >
+            {skill}
+          </span>
+        ))}
+      </div>
+    </div>
+  )}
+</div>
 
         <div className="mt-8 flex flex-wrap gap-3 border-t border-slate-100 pt-6">
           {hasGithub ? (

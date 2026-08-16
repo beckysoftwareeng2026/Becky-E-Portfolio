@@ -12,6 +12,7 @@ export type Project = {
   image: string;
   featured: boolean;
   category: "frontend" | "backend";
+  plannedSkills?: string[];
 };
 
 export const projects: Project[] = [
@@ -234,27 +235,35 @@ export const projects: Project[] = [
   featured: false,
   category: "backend",
 },
-  {
-    id: 8,
-    title: "CustomKin",
-    subtitle: "Flagship full-stack application",
-    description:
-      "A flagship full-stack application currently in development, designed around authentication, dashboards, APIs, SQL data, and production-ready architecture.",
-    challenge:
-      "Design a portfolio-level flagship application that demonstrates full-stack thinking, scalability, and real product architecture.",
-    solution:
-      "Planned with React, Node.js, SQL, REST APIs, authentication, reusable UI patterns, and a dashboard-focused user experience.",
-    learned: [
-      "Full-Stack Planning",
-      "SQL Design",
-      "Authentication",
-      "Dashboards",
-    ],
-    technologies: ["React", "Node.js", "SQL", "REST APIs"],
-    github: "",
-    demo: "",
-    image: "/images/customkin.png",
-    featured: true,
-    category: "frontend",
-  },
+{
+  id: 8,
+  title: "CustomKin",
+  subtitle: "Customizable family tree builder",
+  description:
+    "A customizable family tree builder in active development, combining interactive graph visualization, family relationship modeling, and design customization with a planned full-stack data layer.",
+  challenge:
+    "Build an intuitive family tree experience that can represent multi-generation relationships while automatically organizing complex family structures into a clear visual graph.",
+  solution:
+    "Built with React, TypeScript, Vite, and React Flow using custom nodes, relationship logic, automatic generation layouts, union handling, and a reusable theme system.",
+  learned: [
+    "Graph-Based UI Development",
+    "TypeScript Data Modeling",
+    "Dynamic Layout Logic",
+    "Reusable Component Architecture",
+  ],
+  technologies: ["React", "TypeScript", "Vite", "React Flow"],
+  plannedSkills: [
+    "Testing",
+    "Accessibility",
+    "State Management",
+    "SQL",
+    "CI/CD",
+    "Web Performance",
+  ],
+  github: "https://github.com/jennifercreates01/customkin",
+  demo: "",
+  image: "/images/customkin.png",
+  featured: true,
+  category: "frontend",
+},
 ];
