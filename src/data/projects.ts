@@ -237,21 +237,34 @@ export const projects: Project[] = [
 },
 {
   id: 8,
+
   title: "CustomKin",
+
   subtitle: "Customizable family tree builder",
+
   description:
-    "A customizable family tree builder in active development, combining interactive graph visualization, family relationship modeling, and design customization with a planned full-stack data layer.",
+    "A deployed MVP for a customizable family tree builder, combining interactive graph visualization, family relationship modeling, local persistence, and theme-based design customization.",
+
   challenge:
     "Build an intuitive family tree experience that can represent multi-generation relationships while automatically organizing complex family structures into a clear visual graph.",
+
   solution:
-    "Built with React, TypeScript, Vite, and React Flow using custom nodes, relationship logic, automatic generation layouts, union handling, and a reusable theme system.",
+    "Built with React, TypeScript, Vite, React Flow, and React Router using custom nodes and edges, relationship logic, automatic generation layouts, union handling, local persistence, and a reusable theme system.",
+
   learned: [
     "Graph-Based UI Development",
     "TypeScript Data Modeling",
     "Dynamic Layout Logic",
     "Reusable Component Architecture",
   ],
-  technologies: ["React", "TypeScript", "Vite", "React Flow"],
+
+  technologies: [
+    "React",
+    "TypeScript",
+    "Vite",
+    "React Flow",
+  ],
+
   plannedSkills: [
     "Testing",
     "Accessibility",
@@ -260,10 +273,15 @@ export const projects: Project[] = [
     "CI/CD",
     "Web Performance",
   ],
+
   github: "https://github.com/jennifercreates01/customkin",
-  demo: "",
+
+  demo: "https://customkin.vercel.app/",
+
   image: "/images/customkin.png",
+
   featured: true,
+
   category: "frontend",
 },
 ];

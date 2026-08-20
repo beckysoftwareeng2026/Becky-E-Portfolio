@@ -35,13 +35,8 @@ const projectPreview = (
       alt={`${project.title} project preview`}
       className={imageClasses}
     />
-
-    {isCustomKin && (
-      <div className="absolute left-4 top-6 rounded-full border border-white/70 bg-white/90 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-600 shadow-sm backdrop-blur">
-        Currently in Development
-      </div>
-    )}
   </div>
+
 );
   return (
     <article
